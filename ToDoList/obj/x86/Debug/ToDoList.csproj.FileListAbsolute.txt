@@ -218,3 +218,8 @@ C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\PageChooseProject
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\PageChooseProject.g.cs
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\PageChooseProject.xaml
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\PageChooseProject.xbf
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\CreateProject.xbf
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.g.i.cs
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.g.cs
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.xaml
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.xbf

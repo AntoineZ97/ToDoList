@@ -24,49 +24,18 @@ namespace ToDoList
     public sealed partial class MainPage : Page
     {
         Windows.Storage.ApplicationDataCompositeValue composite = new Windows.Storage.ApplicationDataCompositeValue();
-
+        FileGestion fileGestion = new FileGestion();
         public MainPage()
         {
             this.InitializeComponent();
+            fileGestion.CreateFileProject("NameProject");
             //CreateFileProject();
         }
 
-        async void CreateFileProject(String name)
-        {
-            Windows.Storage.StorageFolder storageFolder =
-                Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile =
-                await storageFolder.CreateFileAsync(name + ".txt",
-                    Windows.Storage.CreationCollisionOption.OpenIfExists);
-        }
-
-        async void WriteOnFile(string data)
-        {
-            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile = await storageFolder.GetFileAsync(data + ".txt");
-            string tmp = await ReadOnFileAsync(data);
-            if (tmp != null)
-                data = data + "\n" + tmp;
-            var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(data, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
-            await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
-            //await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
-        }
-
-        private async System.Threading.Tasks.Task<string> ReadOnFileAsync(string name)
-        {
-            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            Windows.Storage.StorageFile sampleFile = await storageFolder.GetFileAsync(name + ".txt");
-            var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
-            using (var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer))
-            {
-                string text = dataReader.ReadString(buffer.Length);
-                return (text);
-            }
-        }
+       
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            CreateFileProject("Toto");
-            WriteOnFile("Toto");
+           this.Frame.Navigate(typeof(CreateProject));
         }
 
         private void TextBox_TextChangedAsync(object sender, TextChangedEventArgs e)
@@ -74,19 +43,10 @@ namespace ToDoList
 
         }
 
-        private async void SeeProject_Click(object sender, RoutedEventArgs e)
+        private  void SeeProject_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(PageChooseProject));
-
-            try
-            {
-                string text = await ReadOnFileAsync("Toto");
-                ResultTextBlock.Text = text;
-            }
-            catch (System.IO.FileNotFoundException)
-            {
-                ResultTextBlock.Text = "Vous n'avez pas de projets !";
-            }
+    
         }
 
         private void DeleteProjectClik(object sender, RoutedEventArgs e)

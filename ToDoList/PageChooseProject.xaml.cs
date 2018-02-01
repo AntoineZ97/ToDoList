@@ -22,14 +22,48 @@ namespace ToDoList
     /// </summary>
     public sealed partial class PageChooseProject : Page
     {
+        FileGestion fileGestion = new FileGestion();
+
         public PageChooseProject()
         {
             this.InitializeComponent();
+            CreateButtonAsync();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void Button_ProjectAsync(object sender, RoutedEventArgs e)
+        {
+            string tmp = (sender as Button).Tag.ToString();
+            string data = await fileGestion.ReadOnFileAsync(tmp);
+            test.Text = data.ToString();
+        }
+        private async System.Threading.Tasks.Task CreateButtonAsync()
+        {
+            string tmp = await fileGestion.ReadOnFileAsync("NameProject");
+            if (tmp != null)
+            {
+                List<string> name = tmp.Split('\n').ToList();
+                foreach (var projet in name)
+                {
+                    if (projet != "" && projet != " ")
+                    {
+                        Button newBtn = new Button()
+                        {
+                            Name = projet.ToString(),
+                            Content = projet.ToString(),
+                            Tag = projet.ToString()
+                        };
+                        newBtn.Click += new RoutedEventHandler(Button_ProjectAsync);
+                        this.ProjectList.Children.Add(newBtn);
+                    }
+                }
+
+            }
+            
         }
     }
 }

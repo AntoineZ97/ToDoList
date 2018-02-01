@@ -132,17 +132,19 @@ namespace ToDoList.ToDoList_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "ToDoList.MainPage";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "ToDoList.CreateProject";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "ToDoList.PageChooseProject";
+            _typeNameTable[3] = "ToDoList.MainPage";
+            _typeNameTable[4] = "ToDoList.PageChooseProject";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::ToDoList.MainPage);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::ToDoList.CreateProject);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::ToDoList.PageChooseProject);
+            _typeTable[3] = typeof(global::ToDoList.MainPage);
+            _typeTable[4] = typeof(global::ToDoList.PageChooseProject);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,8 +179,9 @@ namespace ToDoList.ToDoList_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::ToDoList.MainPage(); }
-        private object Activate_3_PageChooseProject() { return new global::ToDoList.PageChooseProject(); }
+        private object Activate_0_CreateProject() { return new global::ToDoList.CreateProject(); }
+        private object Activate_3_MainPage() { return new global::ToDoList.MainPage(); }
+        private object Activate_4_PageChooseProject() { return new global::ToDoList.PageChooseProject(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,9 +193,9 @@ namespace ToDoList.ToDoList_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ToDoList.MainPage
+            case 0:   //  ToDoList.CreateProject
                 userType = new global::ToDoList.ToDoList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_CreateProject;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -205,9 +208,16 @@ namespace ToDoList.ToDoList_XamlTypeInfo
                 xamlType = new global::ToDoList.ToDoList_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  ToDoList.PageChooseProject
+            case 3:   //  ToDoList.MainPage
                 userType = new global::ToDoList.ToDoList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_PageChooseProject;
+                userType.Activator = Activate_3_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  ToDoList.PageChooseProject
+                userType = new global::ToDoList.ToDoList_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_PageChooseProject;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

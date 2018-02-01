@@ -10,7 +10,8 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:ConnectionId='1' Name="ReturnButton" Content="Retour" HorizontalAlignment="Left" Margin="21,27,0,0" VerticalAlignment="Top"                     />
         <TextBox x:ConnectionId='2' x:Name="ListProject" HorizontalAlignment="Left" Margin="79,86,0,0" Text="Vos projets :" VerticalAlignment="Top" FontSize="36"/>
-
+        <StackPanel x:ConnectionId='3' x:Name="ProjectList" Margin="33,184,31,47">        </StackPanel>
+        <TextBlock x:ConnectionId='4' x:Name="test" Margin="106,587,123,6"></TextBlock>
     </Grid>
 </Page>
 
