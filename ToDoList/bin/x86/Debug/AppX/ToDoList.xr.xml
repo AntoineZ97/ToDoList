@@ -36,6 +36,7 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Header" />
@@ -44,12 +45,10 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="ToDoList.CreateProject" />
     <RootType FullName="ToDoList.MainPage" />
     <RootType FullName="ToDoList.PageChooseProject" />
+    <RootType FullName="ToDoList.ProjectControl" />
   </Roots.RootTypes>
 </Roots>

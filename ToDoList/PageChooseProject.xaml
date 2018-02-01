@@ -9,8 +9,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Name="ReturnButton" Content="Retour" HorizontalAlignment="Left" Margin="21,27,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="ListProject" HorizontalAlignment="Left" Margin="79,86,0,0" Text="Vos projets :" VerticalAlignment="Top" FontSize="36"/>
-        <StackPanel x:Name="ProjectList" Margin="33,184,31,47">        </StackPanel>
-        <TextBlock x:Name="test" Margin="106,587,123,6"></TextBlock>
+        <TextBlock x:Name="ListProject" HorizontalAlignment="Left" Margin="79,86,0,0" Text="Vos projets :" VerticalAlignment="Top" FontSize="36"/>
+        <StackPanel x:Name="ProjectList" Margin="33,155,31,76">        </StackPanel>
+        <TextBlock x:Name="test" Margin="22,581,207,12"></TextBlock>
+        <Button x:Name="DeleteButton" Content="Supprimer" Margin="249,596,0,12" Background="red"></Button>
     </Grid>
 </Page>

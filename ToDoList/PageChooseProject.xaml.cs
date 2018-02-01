@@ -23,6 +23,7 @@ namespace ToDoList
     public sealed partial class PageChooseProject : Page
     {
         FileGestion fileGestion = new FileGestion();
+        DataGestion dataGestion = new DataGestion();
 
         public PageChooseProject()
         {
@@ -39,7 +40,11 @@ namespace ToDoList
         {
             string tmp = (sender as Button).Tag.ToString();
             string data = await fileGestion.ReadOnFileAsync(tmp);
-            test.Text = data.ToString();
+            var parameters = new ProjetParam();
+            dataGestion.SetNameProject(data);
+            parameters.Name = dataGestion.GetNameProject();
+            parameters.Data = dataGestion.GetData();
+            this.Frame.Navigate(typeof(ProjectControl) ,parameters);
         }
         private async System.Threading.Tasks.Task CreateButtonAsync()
         {

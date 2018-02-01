@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="ToDoList.ProjectControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToDoList"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:ConnectionId='1' x:Name="Title" Margin="37,105,43,502" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>
+        <Button x:ConnectionId='2' x:Name="Menu" Content="Home" Margin="4,4,0,604" HorizontalAlignment="Left"                   ></Button>
+        <Button x:ConnectionId='3' x:Name="Supprimer" Content="Supprimer le projet" Margin="0,4,0,604"                    HorizontalAlignment="Right" Background="red"></Button>
+        <Button x:ConnectionId='4' x:Name="Ajouter" Content="Ajouter une tache" Margin="110,604,112,4"                    HorizontalAlignment="Center"></Button>
+
+    </Grid>
+</Page>
+

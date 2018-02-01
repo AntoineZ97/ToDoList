@@ -33,10 +33,11 @@ namespace ToDoList
             file.CreateFileProject(nameInput.Text);
             file.WriteOnFile("NameProject", nameInput.Text);
             DateTime thisDay = DateTime.Today;
+            string name = "Name:" + nameInput.Text;
             string creation = "Creation:" + thisDay.ToString("g");
             string modification = "Modification:" + thisDay.ToString("g");
             string description = "Description:" + descriptionInput.Text;
-            string final = description + "\n" + creation + "\n" + modification;
+            string final = name + "\n" + description + "\n" + creation + "\n" + modification;
             file.WriteOnFile(nameInput.Text, final);
             this.Frame.Navigate(typeof(MainPage));
         }

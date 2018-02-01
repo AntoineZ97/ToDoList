@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataGestion.cs" />
     <Compile Include="FileGestion.cs" />
     <Compile Include="CreateProject.xaml.cs">
       <DependentUpon>CreateProject.xaml</DependentUpon>
@@ -105,6 +106,10 @@
     <Compile Include="PageChooseProject.xaml.cs">
       <DependentUpon>PageChooseProject.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProjectControl.xaml.cs">
+      <DependentUpon>ProjectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +142,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageChooseProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-        <Button x:Name = "AddButton" Content="Ajouter un projet" HorizontalAlignment="Left" Margin="36,332,0,0" VerticalAlignment="Top" FontSize="36" Click="AddButton_Click" Background="Gray"/>
-        <TextBlock x:Name="ResultTextBlock" HorizontalAlignment="Left" Margin="83,21,0,0" Text="ToDoList" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="50" FontFamily="Bauhaus 93" FontStyle="Italic" FontWeight="Bold"/>
-        <Button x:Name = "SeeProject" Content="VOS PROJETS" HorizontalAlignment="Left" Margin="63,161,0,0" VerticalAlignment="Top" FontSize="36" Click="SeeProject_Click" Background="Gray"/>
+        <Button x:Name = "AddButton" Content="Ajouter un projet" HorizontalAlignment="Center" Margin="36,332,0,0" VerticalAlignment="Top" FontSize="36" Click="AddButton_Click" Background="Gray"/>
+        <TextBlock x:Name="ResultTextBlock" HorizontalAlignment="Center" Margin="75,21,80,0" Text="ToDoList" TextWrapping="Wrap" VerticalAlignment="Stretch" FontSize="50" FontFamily="Bauhaus 93" FontStyle="Italic" FontWeight="Bold" Width="205"/>
+        <Button x:Name = "SeeProject" Content="VOS PROJETS" HorizontalAlignment="Center" Margin="63,161,0,0" VerticalAlignment="Stretch" FontSize="36" Click="SeeProject_Click" Background="Gray"/>
         <Button x:Name = "DeleteProject" Content="Supprime un Projet" HorizontalAlignment="Left" Margin="17,491,0,0" VerticalAlignment="Top" FontSize="36" Click="DeleteProjectClik" Background="Gray"/>
     </Grid>
 </Page>

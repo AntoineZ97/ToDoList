@@ -223,3 +223,8 @@ C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.g.i
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.g.cs
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.xaml
 C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\CreateProject.xbf
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\ProjectControl.g.i.cs
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\ProjectControl.g.cs
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\ProjectControl.xaml
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\ProjectControl.xbf
+C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\ProjectControl.xbf

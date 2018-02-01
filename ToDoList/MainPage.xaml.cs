@@ -23,7 +23,6 @@ namespace ToDoList
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        Windows.Storage.ApplicationDataCompositeValue composite = new Windows.Storage.ApplicationDataCompositeValue();
         FileGestion fileGestion = new FileGestion();
         public MainPage()
         {
