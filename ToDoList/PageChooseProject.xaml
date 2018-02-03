@@ -9,9 +9,11 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Name="ReturnButton" Content="Retour" HorizontalAlignment="Left" Margin="21,27,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBlock x:Name="ListProject" HorizontalAlignment="Left" Margin="79,86,0,0" Text="Vos projets :" VerticalAlignment="Top" FontSize="36"/>
-        <StackPanel x:Name="ProjectList" Margin="33,155,31,76">        </StackPanel>
+        <TextBlock x:Name="ListProject"  Margin="81,86,85,0" Text="Vos projets :" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Disabled" Width="298" HorizontalAlignment="Center" Margin="27,154,35,24" BorderBrush="Black">
+            <StackPanel x:Name="ProjectList"  HorizontalAlignment="Center" BorderBrush="Black"  ></StackPanel>
+        </ScrollViewer>
         <TextBlock x:Name="test" Margin="22,581,207,12"></TextBlock>
-        <Button x:Name="DeleteButton" Content="Supprimer" Margin="249,596,0,12" Background="red"></Button>
     </Grid>
 </Page>

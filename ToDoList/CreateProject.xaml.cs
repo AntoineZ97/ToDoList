@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,9 +28,21 @@ namespace ToDoList
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             FileGestion file = new FileGestion();
+            if (nameInput.Text == "")
+            {
+                nameInput.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                return;
+            }
+            string tmp =  await file.ReadOnFileAsync("NameProject");
+            if (tmp.ToString().Contains(nameInput.Text))
+            {
+                nameInput.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+                nameInput.Text = "Projet déja existant !";
+                return;
+            }
             file.CreateFileProject(nameInput.Text);
             file.WriteOnFile("NameProject", nameInput.Text);
             DateTime thisDay = DateTime.Today;
@@ -45,6 +58,14 @@ namespace ToDoList
         private void Button_Cancel(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+      
+
+        private void descriptionInput_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            descriptionInput.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Blue);
+
         }
     }
 }

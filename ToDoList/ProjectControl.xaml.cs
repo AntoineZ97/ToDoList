@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,15 +25,26 @@ namespace ToDoList
     {
         private string nameProject;
         private string content;
+        DataGestion dataGestion = null;
+        FileGestion fileGestion = new FileGestion();
+        object paramConstant;
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
+            
             var parameters = (ProjetParam)e.Parameter;
+            paramConstant = parameters;
             nameProject = parameters.Name;
             content = parameters.Data;
+            dataGestion = new DataGestion();
+            dataGestion.SetDateCreation(content);
+            dataGestion.SetDescription(content);
             this.Title.Text = nameProject;
+            this.Description.Text = dataGestion.GetDescription();
+            this.DateDebut.Text = dataGestion.GetDateCreation();
+            dataGestion.SetActivities(content);
+            CreateButtonTask();
             // parameters.Name
             // parameters.Text
             // ...
@@ -47,5 +59,94 @@ namespace ToDoList
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private async void Delete_ProjectAsync(object sender, RoutedEventArgs e)
+        {
+            if (!StandardPopup.IsOpen)
+            {
+                StandardPopup.IsOpen = true;
+                fileGestion.RemoveTaskAsync(nameProject);
+            }
+        }
+
+        private void ClosePopupClicked(object sender, RoutedEventArgs e)
+        {
+            if (StandardPopup.IsOpen)
+            {
+                StandardPopup.IsOpen = false;
+            }
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Add_Task(object sender, RoutedEventArgs e)
+        {
+            if (StandardPopup.IsOpen)
+            {
+                StandardPopup.IsOpen = false;
+                this.Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                AddTaskPop.IsOpen = true;
+            }
+        }
+
+        private void CheckTask(object sender, RoutedEventArgs e)
+        {
+            if (NameTask.Text != "" && NameTask.Text != "Nom")
+            {
+                string tmp = "Task:" + NameTask.Text + ",1";
+                fileGestion.WriteOnFile(nameProject, tmp);
+                if (AddTaskPop.IsOpen)
+                {
+                    NameTask.Text = "";
+                    AddTaskPop.IsOpen = false;
+                    ReloadAsync(paramConstant);
+
+                }
+            }
+            else
+            {
+                NameTask.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red);
+            }
+        }
+
+        private void CreateButtonTask()
+        {
+            List<Tuple<string, int>> taskList = dataGestion.GetActivities();
+            foreach (Tuple<string,int> value in taskList)
+            {
+                if (value.Item2 == 1)
+                {
+                    Button newBtn = new Button()
+                    {
+                        Name = value.Item1.ToString(),
+                        Content = value.Item1.ToString(),
+                        Tag = value.Item1.ToString()
+                    };
+                    newBtn.Click += new RoutedEventHandler(Button_TaskUse);
+                    this.Doing.Children.Add(newBtn);
+                }
+            }
+        }
+
+        private void Button_TaskUse(object sender, RoutedEventArgs e)
+        {
+            AddTaskPop.IsOpen = false;
+        }
+
+        private void CancelTask(object sender, RoutedEventArgs e)
+        {
+            AddTaskPop.IsOpen = false;
+        }
+
+
+
+        private async Task ReloadAsync(object param)
+        {
+            await Task.Delay(100);
+            Frame.Navigate(this.GetType(), param);
+        }
     }
+
 }

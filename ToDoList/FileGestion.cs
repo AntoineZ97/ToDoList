@@ -12,21 +12,52 @@ namespace ToDoList
         {
             Windows.Storage.StorageFolder storageFolder =
                 Windows.Storage.ApplicationData.Current.LocalFolder;
+            try
+            {
+                Windows.Storage.StorageFile sampleFile =
+                    await storageFolder.CreateFileAsync(name + ".txt",
+                        Windows.Storage.CreationCollisionOption.OpenIfExists);
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                return;
+            }
+        }
+
+        async public void CreateNewFileProject(String name)
+        {
+            Windows.Storage.StorageFolder storageFolder =
+                Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile sampleFile =
                 await storageFolder.CreateFileAsync(name + ".txt",
-                    Windows.Storage.CreationCollisionOption.OpenIfExists);
+                    Windows.Storage.CreationCollisionOption.ReplaceExisting);
         }
 
         async public void WriteOnFile(string name, string data)
         {
             Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            try
+            {
+                Windows.Storage.StorageFile sampleFile = await storageFolder.GetFileAsync(name + ".txt");
+                string tmp = await ReadOnFileAsync(name);
+                if (tmp != null)
+                    tmp = tmp + "\n" + data;
+                else
+                    tmp = data;
+                var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(tmp, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
+                await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
+            }
+            catch (System.ArgumentException)
+            {
+                return;
+            }
+        }
+
+        async public void WriteOnFile(string name, string data, bool ok)
+        {
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile sampleFile = await storageFolder.GetFileAsync(name + ".txt");
-            string tmp = await ReadOnFileAsync(name);
-            if (tmp != null)
-                tmp = tmp + "\n" + data;
-            else
-                tmp = data;
-            var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(tmp, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
+            var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(data, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
             await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
         }
 
@@ -38,7 +69,26 @@ namespace ToDoList
             using (var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer))
             {
                 string text = dataReader.ReadString(buffer.Length);
+                Task.WaitAll();
                 return (text);
+            }
+        }
+
+        public async void RemoveTaskAsync(string name)
+        {
+            string tmp = await ReadOnFileAsync("NameProject");
+            if (tmp != null)
+            {
+                List<string> listProject = tmp.Split('\n').ToList();
+                string newFile = "";
+                foreach (var value in listProject)
+                {
+                    if (value.ToString().Contains(name) == false)
+                    {
+                        newFile += (value + "\n");
+                    }
+                }
+                WriteOnFile("NameProject", newFile, true);
             }
         }
     }

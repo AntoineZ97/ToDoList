@@ -9,15 +9,15 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
-            <TextBlock Text="                         Créer un nouveau projet" Margin="0,40,0,0"/>
+            <TextBlock Text="Créer un nouveau projet" Margin="0,40,0,0" TextAlignment="Center"/>
 
-            <TextBox x:Name="nameInput"
-                     Header="Nom du projet :" PlaceholderText="NameProject"
-                     Width="150" HorizontalAlignment="Center" Margin="18,80,0,0"/>
+            <TextBox x:Name="nameInput" TextAlignment="Center"
+                     Header="Nom du projet :" PlaceholderText="Nom"
+                     Width="310" HorizontalAlignment="Left" Margin="18,80,0,0"/>
             <TextBlock x:Name="getInputName"/>
             <TextBox x:Name="descriptionInput"
-                     Header="Description du projet :" PlaceholderText="Description"
-                     Width="312" HorizontalAlignment="Center" Margin="24,80,24,0" Height="136"/>
+                     Header="Description du projet :" PlaceholderText="Description" AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     Width="312" HorizontalAlignment="Left" Margin="24,80,24,0" Height="136" TextChanging="descriptionInput_TextChanging"/>
             <TextBlock x:Name="getInputDescription"/>
         </StackPanel>
         <Button Content="Ajouter" Click="Button_Click" Margin="148,472,143,136" HorizontalAlignment="Center"/>
