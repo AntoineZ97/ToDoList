@@ -92,6 +92,29 @@ namespace ToDoList
             }
         }
 
+        public async void RemoveTaskProjectAsync(string name, string project)
+        {
+            string tmp = await ReadOnFileAsync(project);
+            if (tmp != null)
+            {
+                List<string> listProject = tmp.Split('\n').ToList();
+                string newFile = "";
+                foreach (var value in listProject)
+                {
+                    if (value.ToString().Contains("Task:"))
+                    {
+                        string valueTmp = value.Substring("Task:".Length);
+                        string[] all = valueTmp.Split(',');
+                        if (all[0].Equals(name) == false)
+                        {
+                            newFile += (value + "\n");
+                        }
+                    }
+                }
+                WriteOnFile(project, newFile, true);
+            }
+        }
+
         public async void ChangeTaskAsync(string nameTask, string nameProject, int newType)
         {
             string tmp = await ReadOnFileAsync(nameProject);

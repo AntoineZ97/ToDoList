@@ -155,6 +155,9 @@ namespace ToDoList
         private void Button_TaskEnd(object sender, RoutedEventArgs e)
         {
             AddTaskPop.IsOpen = false;
+            string tmp = (sender as Button).Tag.ToString();
+            fileGestion.RemoveTaskProjectAsync(tmp, nameProject);
+            Reload();
         }
 
         private void CancelTask(object sender, RoutedEventArgs e)
