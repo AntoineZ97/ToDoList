@@ -33,6 +33,7 @@ namespace ToDoList
 
         public void SetActivities(string data)
         {
+            this.Activities.Clear();
             List<string> name = data.Split('\n').ToList();
             this.data = data;
             foreach (var value in name)
@@ -45,13 +46,11 @@ namespace ToDoList
                     string type = all[1];
                     int typeFinal = Int32.Parse(type);
                     Tuple<string, int> tupleTmp = new Tuple<string, int>(task, typeFinal);
-                    Activities.Add(tupleTmp);
-                    
+                    Activities.Add(tupleTmp);            
                 }
             }
-            Tuple<string, int> tmp = new Tuple<string, int>("Aucune", 1);
-            Activities.Add(tmp);
         }
+
 
         public List<Tuple<string, int>> GetActivities()
         {

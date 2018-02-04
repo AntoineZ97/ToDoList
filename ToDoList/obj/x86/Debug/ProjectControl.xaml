@@ -24,10 +24,11 @@
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox x:ConnectionId='14' x:Name="NameTask" Header="Nom de la tache :" PlaceholderText="Nom"></TextBox>
                     <Button x:ConnectionId='15' Content="Ajouter !"                   HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                    <Button x:ConnectionId='16' Content="Annuler"                    HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <Button x:ConnectionId='16' Content="Annuler"                     HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                 </StackPanel>
             </Border>
         </Popup>
+  
         <Popup x:ConnectionId='7'  x:Name="StandardPopup" >
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -41,7 +42,7 @@
         <TextBlock x:ConnectionId='8' x:Name="DoingBlock" Text="En cours :" TextAlignment="Center" Margin="25,159,248,457" Foreground="Blue" HorizontalAlignment="Left" Grid.Row="0" ></TextBlock>
         <TextBlock x:ConnectionId='9' x:Name="EndBlock" Text="Terminé :" TextAlignment="Center" Margin="226,159,47,457" HorizontalAlignment="Right" Foreground="Green"/>
         <StackPanel x:ConnectionId='10' x:Name="Doing" HorizontalAlignment="Left" Margin="5,186,0,130" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible"  BorderBrush="Cyan"  Padding="1,1,1,1" Width="109">
-            <TextBlock x:ConnectionId='12' x:Name="Default" Text="Coucou" TextAlignment="Center"></TextBlock>
+            <TextBlock x:ConnectionId='12' x:Name="Default"  TextAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel x:ConnectionId='11' x:Name="Ending" HorizontalAlignment="Right" Margin="0,188,6,129" ScrollViewer.VerticalScrollMode="Enabled" BorderBrush="ForestGreen" ScrollViewer.VerticalScrollBarVisibility="Visible"  Padding="1,1,1,1" Width="109" RequestedTheme="Default"></StackPanel>
     </Grid>

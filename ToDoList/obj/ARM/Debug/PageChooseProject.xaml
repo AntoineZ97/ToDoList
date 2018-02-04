@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ToDoList.PageChooseProject"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToDoList"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:ConnectionId='1' Name="ReturnButton" Content="Retour" HorizontalAlignment="Left" Margin="21,27,0,0" VerticalAlignment="Top"                     />
+        <TextBlock x:ConnectionId='2' x:Name="ListProject"  Margin="81,86,85,0" Text="Vos projets :" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Disabled" Width="298" HorizontalAlignment="Center" Margin="27,154,35,24" BorderBrush="Black">
+            <StackPanel x:ConnectionId='4' x:Name="ProjectList"  HorizontalAlignment="Center" BorderBrush="Black"  ></StackPanel>
+        </ScrollViewer>
+        <TextBlock x:ConnectionId='3' x:Name="test" Margin="22,581,207,12"></TextBlock>
+    </Grid>
+</Page>
+

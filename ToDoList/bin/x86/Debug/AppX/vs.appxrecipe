@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>PC_TATANOUU</Machine>
+    <Machine>DESKTOP-GSC1DL8</Machine>
     <WindowsUser>Tatanouu</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ac32dfb8-8284-4c9a-8323-81b4fc60bc09</PackageIdentityName>
     <PackageIdentityPublisher>CN=Tatanouu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>D98F8999F5D53775D9A1635D9DB3CE990F17021711552979FE1ABC6ACA9C7AAE</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>ACB0B788BA304248B1A585F3E27DBA3B9DC7042A9BB6C519835973E044DDA5EB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>ac32dfb8-8284-4c9a-8323-81b4fc60bc09_1.0.0.0_x86__whv7t8re94dz6</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>ac32dfb8-8284-4c9a-8323-81b4fc60bc09_whv7t8re94dz6!App</RegisteredUserModeAppID>
     <RegisteredPackageID>ac32dfb8-8284-4c9a-8323-81b4fc60bc09</RegisteredPackageID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-03T03:12:31.145</Modified>
+      <Modified>2018-02-04T17:41:46.584</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\ToDoList.exe">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\ToDoList.exe">
       <PackagePath>entrypoint\ToDoList.exe</PackagePath>
-      <Modified>2018-02-03T03:12:30.926</Modified>
+      <Modified>2018-02-04T17:41:45.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tatanouu\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,60 +495,60 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T21:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-01-31T13:21:43.495</Modified>
+      <Modified>2018-02-04T12:37:43.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.688</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.689</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.690</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.691</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.691</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-06T09:22:48.814</Modified>
+      <Modified>2018-02-04T12:37:43.693</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\ToDoList.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\ToDoList.xr.xml">
       <PackagePath>ToDoList.xr.xml</PackagePath>
-      <Modified>2018-02-03T02:28:05.406</Modified>
+      <Modified>2018-02-04T12:37:46.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-28T16:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-02-03T02:28:35.368</Modified>
+      <Modified>2018-02-04T16:01:47.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\Core\ToDoList.exe">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\Core\ToDoList.exe">
       <PackagePath>ToDoList.exe</PackagePath>
-      <Modified>2018-02-03T03:12:31.140</Modified>
+      <Modified>2018-02-04T17:41:46.573</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

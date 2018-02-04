@@ -1,1 +1,1 @@
-C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\ToDoList.csproj;x86
+C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\ToDoList.csproj;x86

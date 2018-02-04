@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>PC_TATANOUU</Machine>
+    <Machine>DESKTOP-GSC1DL8</Machine>
     <WindowsUser>Tatanouu</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>ac32dfb8-8284-4c9a-8323-81b4fc60bc09</PackageIdentityName>
     <PackageIdentityPublisher>CN=Tatanouu</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\ToDoList.exe">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\ToDoList.exe">
       <PackagePath>entrypoint\ToDoList.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tatanouu\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -370,47 +370,47 @@
     <AppxPackagedFile Include="C:\Users\Tatanouu\.nuget\packages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\ToDoList.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\ToDoList.xr.xml">
       <PackagePath>ToDoList.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Tatanouu\source\repos\ToDoList\ToDoList\bin\x86\Debug\Core\ToDoList.exe">
+    <AppxPackagedFile Include="C:\Users\Tatanouu\TEK3\ToDoList\ToDoList\bin\x86\Debug\Core\ToDoList.exe">
       <PackagePath>ToDoList.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

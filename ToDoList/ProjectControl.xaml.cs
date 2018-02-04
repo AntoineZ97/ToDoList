@@ -34,7 +34,7 @@ namespace ToDoList
             base.OnNavigatedTo(e);
             
             var parameters = (ProjetParam)e.Parameter;
-            paramConstant = parameters;
+            paramConstant = e.Parameter;
             nameProject = parameters.Name;
             content = parameters.Data;
             dataGestion = new DataGestion();
@@ -101,8 +101,7 @@ namespace ToDoList
                 {
                     NameTask.Text = "";
                     AddTaskPop.IsOpen = false;
-                    ReloadAsync(paramConstant);
-
+                    Reload();
                 }
             }
             else
@@ -122,15 +121,38 @@ namespace ToDoList
                     {
                         Name = value.Item1.ToString(),
                         Content = value.Item1.ToString(),
-                        Tag = value.Item1.ToString()
+                        Tag = value.Item1.ToString(),
+                        Background = new SolidColorBrush(Windows.UI.Colors.Cyan)
+
                     };
                     newBtn.Click += new RoutedEventHandler(Button_TaskUse);
                     this.Doing.Children.Add(newBtn);
+                }
+                else if (value.Item2 == 2)
+                {
+                    Button newBtn = new Button()
+                    {
+                        Name = value.Item1.ToString(),
+                        Content = value.Item1.ToString(),
+                        Tag = value.Item1.ToString(),
+                        Background = new SolidColorBrush(Windows.UI.Colors.GreenYellow)
+
+                    };
+                    newBtn.Click += new RoutedEventHandler(Button_TaskEnd);
+                    this.Ending.Children.Add(newBtn);
                 }
             }
         }
 
         private void Button_TaskUse(object sender, RoutedEventArgs e)
+        {
+            string tmp = (sender as Button).Tag.ToString();
+            fileGestion.ChangeTaskAsync(tmp, nameProject, 2);
+            AddTaskPop.IsOpen = false;
+            Reload();
+        }
+
+        private void Button_TaskEnd(object sender, RoutedEventArgs e)
         {
             AddTaskPop.IsOpen = false;
         }
@@ -141,11 +163,14 @@ namespace ToDoList
         }
 
 
-
-        private async Task ReloadAsync(object param)
+        private async void Reload()
         {
-            await Task.Delay(100);
-            Frame.Navigate(this.GetType(), param);
+            this.Doing.Children.Clear();
+            this.Ending.Children.Clear();
+            string tmp = await fileGestion.ReadOnFileAsync(nameProject);
+            
+            dataGestion.SetActivities(tmp);
+            CreateButtonTask();
         }
     }
 

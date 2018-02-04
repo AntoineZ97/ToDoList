@@ -24,10 +24,11 @@
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBox x:Name="NameTask" Header="Nom de la tache :" PlaceholderText="Nom"></TextBox>
                     <Button Content="Ajouter !" Click="CheckTask" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                    <Button Content="Annuler" Click="CancelTask" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                    <Button Content="Annuler" Click="CancelTask"  HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                 </StackPanel>
             </Border>
         </Popup>
+  
         <Popup  x:Name="StandardPopup" >
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
@@ -41,7 +42,7 @@
         <TextBlock x:Name="DoingBlock" Text="En cours :" TextAlignment="Center" Margin="25,159,248,457" Foreground="Blue" HorizontalAlignment="Left" Grid.Row="0" ></TextBlock>
         <TextBlock x:Name="EndBlock" Text="Terminé :" TextAlignment="Center" Margin="226,159,47,457" HorizontalAlignment="Right" Foreground="Green"/>
         <StackPanel x:Name="Doing" HorizontalAlignment="Left" Margin="5,186,0,130" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible"  BorderBrush="Cyan"  Padding="1,1,1,1" Width="109">
-            <TextBlock x:Name="Default" Text="Coucou" TextAlignment="Center"></TextBlock>
+            <TextBlock x:Name="Default"  TextAlignment="Center"></TextBlock>
         </StackPanel>
         <StackPanel x:Name="Ending" HorizontalAlignment="Right" Margin="0,188,6,129" ScrollViewer.VerticalScrollMode="Enabled" BorderBrush="ForestGreen" ScrollViewer.VerticalScrollBarVisibility="Visible"  Padding="1,1,1,1" Width="109" RequestedTheme="Default"></StackPanel>
     </Grid>
